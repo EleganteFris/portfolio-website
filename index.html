@@ -3,99 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhon Franklin Zuluaga Asprilla | Software Engineer</title>
+    <title>Jhon Franklin Zuluaga Asprilla | Enterprise Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Fondo del océano animado -->
-    <div class="ocean">
-        <div class="bubble b1"></div>
-        <div class="bubble b2"></div>
-        <div class="bubble b3"></div>
-        <div class="fish f1">🐟</div>
-        <div class="fish f2">🐠</div>
+    <!-- Sistema Dinámico de Partículas Oceánicas -->
+    <div class="ocean-engine" id="ocean-simulation">
+        <div class="abyssal-gradient"></div>
+        <div class="fish f-right">🐟</div>
+        <div class="fish f-left">🐠</div>
+        <div class="fish f-fast">🐙</div>
         <div class="jellyfish">🪼</div>
     </div>
 
-    <!-- Navegación -->
-    <nav>
-        <div class="logo">🌊 JFZA.Dev</div>
-        <ul>
-            <li><a href="#tecnologias">Tecnologías</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+    <!-- Barra de Navegación de Alta Densidad -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="pulse-icon"></span>
+            <span class="brand-text">JFZA // SYSTEM_ENGINEER</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#stack">Stack Políglota</a></li>
+            <li><a href="#workspace">Workspace</a></li>
+            <li><a href="#terminal">Core CLI</a></li>
         </ul>
     </nav>
 
-    <!-- Encabezado Principal -->
-    <header>
-        <h1>JHON FRANKLIN ZULUAGA ASPRILLA</h1>
-        <p class="subtitle">Ingeniero de Software Políglota & Desarrollador Full-Stack</p>
-        <p class="tagline">Construyendo arquitectura de software escalable y eficiente.</p>
-        <a href="#proyectos" class="btn">Explorar Proyectos</a>
+    <!-- Sección Hero / Dashboard Ejecutivo -->
+    <header id="dashboard" class="hero-container">
+        <div class="hero-badge">ONLINE FOR CONTRACTS // 2026</div>
+        <h1 class="glitch-title">JHON FRANKLIN ZULUAGA ASPRILLA</h1>
+        <p class="hero-subtitle">Desarrollador Full-Stack Sólido • Especialista en Arquitecturas Políglotas concurrentes</p>
+        
+        <div class="metrics-grid">
+            <div class="metric-card"><span class="m-num">21</span><span class="m-label">Lenguajes Core</span></div>
+            <div class="metric-card"><span class="m-num">100%</span><span class="m-label">Proyectos Listos</span></div>
+            <div class="metric-card"><span class="m-num">99.9%</span><span class="m-label">Eficiencia en Sistemas</span></div>
+        </div>
+        <a href="#workspace" class="action-cta">Inicializar Entorno de Desarrollo ↓</a>
     </header>
 
-    <!-- Sección de tus 21 Lenguajes -->
-    <section id="tecnologias">
-        <h2>Stack Tecnológico (21 Lenguajes)</h2>
-        <div class="grid-tech">
-            <div class="categoria-tech">
-                <h3>🌐 Web & Frontend</h3>
-                <p>JavaScript, TypeScript, Dart</p>
+    <!-- Sección de Tecnologías con Filtrado Dinámico -->
+    <section id="stack" class="section-layout">
+        <div class="section-header">
+            <h2>Ecosistema de Habilidades Multi-Paradigma</h2>
+            <p>Filtrado de entornos de ejecución en tiempo real.</p>
+        </div>
+        
+        <div class="filter-controls">
+            <button class="filter-btn active" onclick="filtrarTecnologias('todos')">Todos</button>
+            <button class="filter-btn" onclick="filtrarTecnologias('frontend')">Frontend / Web</button>
+            <button class="filter-btn" onclick="filtrarTecnologias('backend')">Sistemas / Backend</button>
+            <button class="filter-btn" onclick="filtrarTecnologias('mobile')">Mobile nativo</button>
+            <button class="filter-btn" onclick="filtrarTecnologias('data')">Data / Computing</button>
+        </div>
+
+        <div class="stack-grid" id="tech-container">
+            <!-- Inyectados dinámicamente por JS con tags semánticas -->
+        </div>
+    </section>
+
+    <!-- Workspace / Sección Principal de Proyectos Interactiva -->
+    <section id="workspace" class="section-layout">
+        <div class="section-header">
+            <h2>Workspace Proyectos de Producción</h2>
+            <p>Haz clic en las soluciones de software para auditar su lógica estructurada en tiempo real.</p>
+        </div>
+
+        <div class="workspace-grid">
+            <div class="project-explorer">
+                <div class="explorer-title">Proyectos_Activos</div>
+                <div class="project-item active" onclick="cargarCodigoEnIDE('cryptoPy')">📁 crypto_vault.py</div>
+                <div class="project-item" onclick="cargarCodigoEnIDE('luhnJs')">📁 luhn_validator.ts</div>
+                <div class="project-item" onclick="cargarCodigoEnIDE('metricsSql')">📁 metrics_analytics.sql</div>
             </div>
-            <div class="categoria-tech">
-                <h3>⚙️ Backend & Sistemas</h3>
-                <p>Python, PHP, Ruby, Java, Go, Rust, Zig, C#, C, C++, Elixir</p>
-            </div>
-            <div class="categoria-tech">
-                <h3>📱 Móvil</h3>
-                <p>Kotlin, Swift</p>
-            </div>
-            <div class="categoria-tech">
-                <h3>📊 Datos & Análisis</h3>
-                <p>SQL, R, Julia, Scala, MATLAB</p>
+
+            <!-- Simulador IDE Avanzado (Visual Studio Code Style) -->
+            <div class="ide-window">
+                <div class="ide-header">
+                    <div class="window-controls">
+                        <span class="w-dot red"></span>
+                        <span class="w-dot yellow"></span>
+                        <span class="w-dot green"></span>
+                    </div>
+                    <div class="ide-tab-active" id="ide-filename">crypto_vault.py</div>
+                    <div class="ide-actions">
+                        <button class="ide-btn" onclick="copiarCodigoAlPortapapeles()">📋 Copiar</button>
+                        <button class="ide-btn" onclick="descargarArchivoFuente()">📥 Descargar</button>
+                    </div>
+                </div>
+                <div class="ide-body">
+                    <div class="line-numbers" id="ide-lines"></div>
+                    <pre class="code-output"><code id="ide-code-display"></code></pre>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Proyectos Profesionales de Alto Nivel -->
-    <section id="proyectos">
-        <h2>Proyectos Destacados</h2>
-        <div class="grid-proyectos">
-            
-            <!-- Proyecto 1 -->
-            <div class="tarjeta">
-                <h3>🚀 Motor de Búsqueda Indexado</h3>
-                <p><strong>Descripción:</strong> Un sistema de indexación de archivos de alto rendimiento capaz de procesar millones de datos en milisegundos.</p>
-                <p class="tech">Tecnologías principales: Rust | Go | C++ | Zig</p>
-                <a href="#" class="link-proy">Ver Repositorio</a>
+    <!-- Terminal Interactiva Real Linux-Style -->
+    <section id="terminal" class="section-layout">
+        <div class="section-header">
+            <h2>Consola Core Shell Interactiva</h2>
+            <p>Escribe comandos directos para interactuar de forma profunda con el servidor de Jhon.</p>
+        </div>
+        <div class="terminal-box">
+            <div class="terminal-bar">
+                <span>sh - secure_shell_session@jfza.dev</span>
             </div>
-
-            <!-- Proyecto 2 -->
-            <div class="tarjeta">
-                <h3>📊 Pipeline de Datos e Inteligencia de Negocio</h3>
-                <p><strong>Descripción:</strong> Flujo automatizado de extracción, transformación y carga (ETL) de datos masivos con predicción estadística.</p>
-                <p class="tech">Tecnologías principales: Python | R | Julia | SQL | MATLAB</p>
-                <a href="#" class="link-proy">Ver Arquitectura</a>
+            <div class="terminal-body" id="terminal-screen">
+                <div class="terminal-line">JFZA Core Kernel OS Iniciado de forma segura...</div>
+                <div class="terminal-line">Escribe <span class="highlight-text">'help'</span> para ver la lista de comandos del sistema disponibles.</div>
             </div>
-
-            <!-- Proyecto 3 -->
-            <div class="tarjeta">
-                <h3>🔒 E-Commerce Microservices Platform</h3>
-                <p><strong>Descripción:</strong> Plataforma de comercio electrónico basada en microservicios concurrentes y altamente tolerantes a fallos.</p>
-                <p class="tech">Tecnologías principales: TypeScript | Java | C# | Elixir</p>
-                <a href="#" class="link-proy">Ver Código</a>
+            <div class="terminal-input-row">
+                <span class="terminal-prompt">guest@jfza.dev:~$</span>
+                <input type="text" id="cli-input" autocomplete="off" autofocus>
             </div>
-
         </div>
     </section>
 
-    <!-- Contacto -->
-    <footer id="contacto">
-        <h2>¿Listo para integrar soluciones robustas?</h2>
-        <p>Hablemos sobre cómo puedo aportar valor técnico a tu equipo u organización.</p>
-        <p class="correo">📧 tu.correo@email.com</p>
+    <!-- Footer Corporativo Seguro -->
+    <footer class="footer-layout">
+        <div class="footer-inner">
+            <div class="footer-cta">
+                <h2>¿Conectamos para coordinar integraciones?</h2>
+                <p>Disponible para auditorías de sistemas, consultoría políglota y desarrollo full-stack global.</p>
+            </div>
+            <div class="footer-actions">
+                <a href="https://linkedin.com" target="_blank" class="linkedin-premium-btn">Conectar vía Perfil Verificado de LinkedIn</a>
+                <div class="secure-mail-card">
+                    <span class="mail-label">Canal Corporativo Seguro</span>
+                    <a href="mailto:valentina.dev2026@outlook.com" class="mail-value">valentina.dev2026@outlook.com</a>
+                </div>
+            </div>
+            <div class="footer-rights">
+                © 2026 JHON FRANKLIN ZULUAGA ASPRILLA. Todos los derechos reservados bajo arquitectura limpia de código.
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
